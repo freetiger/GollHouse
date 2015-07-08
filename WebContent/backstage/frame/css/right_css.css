@@ -1,0 +1,124 @@
+@CHARSET "UTF-8";
+
+*{
+	margin:0px ;
+	padding:0px;	
+	}
+#mainbody{
+	width:100%;
+	height:100%;
+	}
+#trendsInfo,#shortcut,#systemInfo{
+	width:90%;
+	border:#CCC 1px solid;
+	margin:10px auto;
+	overflow:auto;
+	background:#e7f8ee;
+	border-radius:5px 5px 0px 0px;
+	}
+#trendsInfo{
+	height:80px;
+	}
+#shortcut{
+	height:190px;
+	}
+#systemInfo{
+	height:170px;	
+	}
+.title{
+	width:100%;
+	height:30px;
+	background:#1b99de;	
+	}
+.title span{
+	font-size:15px;
+	font-weight:bolder;
+	margin-left:10px;
+	line-height:30px;
+	font-family:"宋体";
+	color:#dbffff;
+	
+	}
+.trend_context{
+	width:100%;
+	height:60%;
+	}
+.trend_context p{
+	width:100px;
+	float:left;
+	margin-left:30px;
+	margin-top:7px;	
+	font-size:14px;
+	}
+.shortcut_context{
+	width:100%;
+	height:75%;	
+	}
+.systemInfo_context{
+	width:100%;
+	height:120px;
+	margin-top:10px;
+	}
+.shortcut_context .menu{
+	width:10%;
+	height:88%;
+	float:left;
+	margin-left:30px;
+	margin-top:5px;	
+	}
+.shortcut_context .menu:hover{
+	border:#999 3px solid;
+	border-radius:8px;
+}
+.menu img{
+	width:80%;
+	height:80%;
+	margin-left:10px;
+}
+.menu p{
+	font-size:14px;
+	color:blue;
+	text-align:center;
+}
+.menu_table{
+	width:100px;
+	height:30px;
+	background:#2FCEDB;	
+	}
+#tab{
+	width:85%;
+	font-size:14px;
+	margin:10px auto;
+	border-collapse:collapse
+}
+#tab tr td{
+	width:80px;
+	border:#666 1px solid;
+	text-align:center;
+}
+#alterpwd{
+		width:300px;
+		height:300px;
+		border:green 5px solid;
+		border-radius:10px;
+		position:absolute;
+		left:50%;
+		margin-left:-150px;
+		top:200px;
+		display:none;
+		background:#999;
+}
+#formpwd{
+	width:100%;
+	height:100%;
+}
+#formpwd p{
+	margin:20px auto;
+	width:80%;
+	height:25px;
+}
+.inpwd{
+	width:50px;
+	height:30px;
+	margin-left:100px;
+}

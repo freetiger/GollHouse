@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <welcome-file-list>
+    <welcome-file>front/houses/web_page/index.jsp</welcome-file>
+  </welcome-file-list>
+  <!-- 监听器 -->
+   <listener>
+  	<listener-class>cn.goll.listener.listener</listener-class>
+  </listener>
+   <!-- 连接池 -->
+  <servlet>
+  	<servlet-name>proxoolServlet</servlet-name>
+  	<servlet-class>org.logicalcobwebs.proxool.configuration.ServletConfigurator</servlet-class>
+  	<init-param>
+		<param-name>xmlFile</param-name>	
+		<param-value>/WEB-INF/proxool.xml</param-value>
+    </init-param>
+    <!-- 设置优先级,越小越高 -->
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  <!-- 验证码 -->
+  <servlet>
+  	<servlet-name>codeServlet</servlet-name>
+  	<servlet-class>cn.goll.servlet.code.ValiImgServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>codeServlet</servlet-name>
+  	<url-pattern>/code.do</url-pattern>
+  </servlet-mapping>
+  <!-- 编码过滤器 -->
+  <filter>
+  	<filter-name>charsetFilter</filter-name>
+  	<filter-class>cn.goll.filter.charsetFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>charsetFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+    <!-- 后台过滤器 --> 
+  <filter>
+  	<filter-name>loginFilter</filter-name>
+  	<filter-class>cn.goll.filter.loginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>loginFilter</filter-name>
+  	<url-pattern>/backstage/*</url-pattern>
+  </filter-mapping>
+   <!-- 前台过滤器 --> 
+  <filter>
+  	<filter-name>frontFilter</filter-name>
+  	<filter-class>cn.goll.filter.frontFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>frontFilter</filter-name>
+  	<url-pattern>/brokerFrame/*</url-pattern>
+  </filter-mapping>
+  <!--配置错误页面 -->
+   <error-page>
+  	<error-code>404</error-code>
+  	<location>/error/404.jsp</location>
+  </error-page>
+  <error-page>
+  	<error-code>500</error-code>
+  	<location>/error/500.jsp</location>
+  </error-page>
+  <!-- 发送验证邮件 -->
+  <servlet>
+  	<servlet-name>SendEmailServlet</servlet-name>
+  	<servlet-class>cn.goll.servlet.common.SendEmailServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>SendEmailServlet</servlet-name>
+  	<url-pattern>/SendEmail</url-pattern>
+  </servlet-mapping>
+  <!-- 发送手机验证 -->
+  <servlet>
+  	<servlet-name>SendToPhone</servlet-name>
+  	<servlet-class>cn.goll.servlet.common.SendMsg_webchinese</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>SendToPhone</servlet-name>
+  	<url-pattern>/SendToPhone</url-pattern>
+  </servlet-mapping>
+  <!-- 经纪人操作方法 -->
+  <servlet>
+    <servlet-name>BrokeresServlet</servlet-name>
+    <servlet-class>cn.goll.servlet.brokeres.BrokeresServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BrokeresServlet</servlet-name>
+    <url-pattern>/Brokeres</url-pattern>
+  </servlet-mapping>
+  <!-- 区域操作方法 -->
+  <servlet>
+    <servlet-name>AreasServlet</servlet-name>
+    <servlet-class>cn.goll.servlet.areas.AreasServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AreasServlet</servlet-name>
+    <url-pattern>/Areas</url-pattern>
+  </servlet-mapping>
+  <!-- 小区操作方法 -->
+  <servlet>
+    <servlet-name>SmallAreasServlet</servlet-name>
+    <servlet-class>cn.goll.servlet.small_areas.SmallAreasServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SmallAreasServlet</servlet-name>
+    <url-pattern>/SmallAreas</url-pattern>
+  </servlet-mapping>
+  <!-- 小区图片操作方法 -->
+  <servlet>
+    <servlet-name>SmallAreaImgsServlet</servlet-name>
+    <servlet-class>cn.goll.servlet.small_area_imgs.SmallAreaImgsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SmallAreaImgsServlet</servlet-name>
+    <url-pattern>/SmallAreaImgs</url-pattern>
+  </servlet-mapping>
+  <!-- 中介公司操作方法 -->
+  <servlet>
+    <servlet-name>CompanysServlet</servlet-name>
+    <servlet-class>cn.goll.servlet.companys.CompanysServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CompanysServlet</servlet-name>
+    <url-pattern>/Companys</url-pattern>
+  </servlet-mapping>
+   <!-- 管理员操作方法 -->
+  <servlet>
+    <servlet-name>ManagersServlet</servlet-name>
+    <servlet-class>cn.goll.servlet.managers.ManagersServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ManagersServlet</servlet-name>
+    <url-pattern>/Managers</url-pattern>
+  </servlet-mapping>
+    <!-- 房源操作方法 -->
+  <servlet>
+    <servlet-name>HouseServlet</servlet-name>
+    <servlet-class>cn.goll.servlet.houses.HouseServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HouseServlet</servlet-name>
+    <url-pattern>/Houses</url-pattern>
+  </servlet-mapping>
+  <!-- 求租操作方法 -->
+  <servlet>
+    <servlet-name>SeekRentServlet</servlet-name>
+    <servlet-class>cn.goll.servlet.houses.SeekRentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SeekRentServlet</servlet-name>
+    <url-pattern>/SeekRent</url-pattern>
+  </servlet-mapping>
+  <!-- 菜单操作方法 -->
+  <servlet>
+    <servlet-name>MenusServlet</servlet-name>
+    <servlet-class>cn.goll.servlet.menus.MenusServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MenusServlet</servlet-name>
+    <url-pattern>/Menus</url-pattern>
+  </servlet-mapping>
+   <!-- 权限操作方法 -->
+  <servlet>
+    <servlet-name>PowersServlet</servlet-name>
+    <servlet-class>cn.goll.servlet.powers.PowersServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PowersServlet</servlet-name>
+    <url-pattern>/Powers</url-pattern>
+  </servlet-mapping>
+  <!-- 系统操作方法 -->
+  <servlet>
+    <servlet-name>SystemsServlet</servlet-name>
+    <servlet-class>cn.goll.servlet.systems.SystemsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SystemsServlet</servlet-name>
+    <url-pattern>/Systems</url-pattern>
+  </servlet-mapping>
+  <!-- 前台房源操作方法 -->
+  <servlet>
+    <servlet-name>FrontHousesServlet</servlet-name>
+    <servlet-class>cn.goll.servlet.front.HouseServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FrontHousesServlet</servlet-name>
+    <url-pattern>/FrontHouses</url-pattern>
+  </servlet-mapping>
+  <!-- 上传方法 -->
+  <servlet>
+    <servlet-name>uploadServlet</servlet-name>
+    <servlet-class>cn.goll.servlet.common.uploadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>uploadServlet</servlet-name>
+    <url-pattern>/upload</url-pattern>
+  </servlet-mapping>
+   <!-- 下载方法 -->
+  <servlet>
+    <servlet-name>downloadServlet</servlet-name>
+    <servlet-class>cn.goll.servlet.common.downloadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>downloadServlet</servlet-name>
+    <url-pattern>/download</url-pattern>
+  </servlet-mapping>
+  <!-- 生成静态方法 -->
+  <servlet>
+    <servlet-name>HtmlServlet</servlet-name>
+    <servlet-class>cn.goll.servlet.common.HtmlServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HtmlServlet</servlet-name>
+    <url-pattern>/Html</url-pattern>
+  </servlet-mapping>
+  <!-- 系统管理操作方法 -->
+  <servlet>
+    <servlet-name>relevanceServlet</servlet-name>
+    <servlet-class>cn.goll.servlet.relevance.RelevanceServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>relevanceServlet</servlet-name>
+    <url-pattern>/relevance</url-pattern>
+  </servlet-mapping>
+   <!-- 历史记录操作方法 -->
+  <servlet>
+    <servlet-name>HistorysServlet</servlet-name>
+    <servlet-class>cn.goll.servlet.historys.HistorysServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HistorysServlet</servlet-name>
+    <url-pattern>/Historys</url-pattern>
+  </servlet-mapping>
+</web-app>

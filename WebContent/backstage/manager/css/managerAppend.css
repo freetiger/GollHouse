@@ -1,0 +1,28 @@
+@CHARSET "UTF-8";
+.main{
+	width:500px;
+	height:500px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-left:-250px;
+	margin-top:-250px;
+	border-radius:10px;
+	box-shadow:10px 10px 10px #68B4FF;
+	border:#095A85 5px solid;
+	background:#E7F8EE;
+}
+p{
+	width:250px;
+	margin:20px auto;
+}
+#btn{
+	width:180px;
+	height:25px;
+	border-radius:5px;
+	margin-top:50px;
+	margin-left:30px;
+	background:#095A85;
+	color:#fff;
+	font-weight:bolder;
+}

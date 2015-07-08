@@ -1,0 +1,24 @@
+*{margin:0;padding:0;}
+body{font-size:14px;}
+.main_div{width:452px;height:240px;margin:60px auto;}
+	.personal_messages{width:100%;height:240px;border:1px #ccc solid;}
+	.left_div{float:left;width:160px;height:100%;}
+	#header_img{width:40px;height:40px;margin-left:12px;margin-top:32px;display:block;}
+	.level_img{margin-left:12px;display:block;}
+	.level_refresh a{margin-left:12px;color:#999;text-decoration:none;}
+	.level_refresh a:hover{color:black;text-decoration:underline;}
+	.name{margin-top:16px;}
+	.name font{margin-left:12px;color:#E5007C;font-weight:bold;}
+	.vip{margin-top:6px;margin-left:12px;color:red;font-weight:bold;}
+	.integral{margin-left:12px;margin-top:6px;}
+	.right_div{float:left;width:280px;height:100%;}
+	.right_div img{width:280px;height:60px;margin:0px auto;margin-top:32px;}
+	.right_left_div{float:left;width:120px;height:360px;}
+	.house_count{margin-top:12px;line-height:24px;}
+	.smallArea_count{line-height:24px;}
+	.rentOut_count{line-height:24px;}
+	.update_password{line-height:24px;}
+	.right_right_div{float:left;width:160px;height:360px;margin-top:12px;}
+	.upload_house a{line-height:24px;}
+	.goll_qq{margin-top:24px;}
+	.goll_qq,.online_time{line-height:24px;}

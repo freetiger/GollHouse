@@ -1,0 +1,26 @@
+*{margin:0;padding:0;}
+body{font-size:14px;}
+#main_div{margin:12px 12px;border:1px #ccc solid;}
+	.title{width:100%;height:32px;border-bottom:1px #ccc dashed;line-height:32px;color:#0066A1;font-size:12px;}
+	.title font{color:#e5007c;margin-left:12px;font-weight:bold;font-size:14px;}
+	
+	.div_1{width:92%;height:182px;margin-left:4%;border-bottom:4px #ccc solid;}
+	.header{float:left;width:600px;height:100%;}
+	.community_name{width:300px;height:16px;margin-left:100px;margin-top:20px;}
+	.header_check_div{width:300px;height:96px;margin-left:100px;margin-top:12px;}
+	.headers_div{width:240px;height:82px;border:1px #333 solid;}
+	.headers_div img{width:40px;height:40px;background:yellow;border:0;}
+	.header_upload_div,.real_name,.email{margin-left:100px;margin-top:12px;}
+	.header_upload_div{clear:left;}
+	
+	.header_img{float:right;width:100px;height:100px;text-align:center;}
+	.header_img img{width:80px;height:80px;background:yellow;}
+	
+	.div_2{width:92%;height:146px;margin-left:4%;border-bottom:4px #ccc solid;}
+	.integral{width:300px;height:16px;margin-left:100px;margin-top:20px;}
+	.description{margin-left:100px;margin-top:12px;}
+	.description textarea{resize:none;}
+	
+	.div_3{width:92%;height:66px;margin-left:4%;border-bottom:4px #ccc solid;}
+	.company{width:300px;height:16px;margin-left:100px;margin-top:20px;}
+	#submit{margin-left:100px;margin-top:12px;}

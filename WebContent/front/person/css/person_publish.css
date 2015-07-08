@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0px;padding:0px; text-decoration:none;list-style:none};
+a:link{color:blue};
+#main{
+	 width:980px;height:1500px;margin:0px auto;	
+	}
+.logo{
+	width:980px;height:80px; border-bottom:#1b99de 3px solid;	
+	}
+.logo_img{width:100px;height:80px;float:left;}
+.logo_menu{width:150px;height:20px;line-height:20px;font-size:14px;float:right;margin-top:50px;}
+
+.weizhi{
+	 width:100%;height:30px;line-height:30px;font-size:14px;
+}
+.hint{width:100%;height:130px;border:#ccc 1px solid;margin:0px auto;background:#F4F9FF;line-height:25px;font-size:14px;color:#999; text-indent:40px;padding-top:15px;}
+
+/*收集信息*/
+.collect{
+	width:980px;height:1150px;border:#CCC 1px solid;margin-top:10px;	
+	}
+.title{
+	width:100%;height:30px;line-height:30px;font-weight:bolder; text-indent:10px;background:#1b99de;font-size:15px;	
+	}
+.information{
+	width:100%;height:100px;font-size:14px;	
+	}
+.information p{
+	width:100%;height:30px;line-height:30px;margin-top:10px;	
+	}
+.in_span1{width:80px;height:30px;text-align:right;margin-left:50px;}
+.information p span{float:left;}
+.information input{float:left;width:150px;height:25px;}
+
+/*详情描述*/
+.info{
+	width:100%;height:200px;margin-top:10px;	
+	}

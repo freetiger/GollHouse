@@ -1,0 +1,133 @@
+*{margin:0;padding:0;}
+body{font-size:13px;}
+.b_all{width:984px;height:auto;margin:0px auto;overflow:auto}
+.b_header{width:100%;height:30px;}
+	.header_ul{width:100%;height:30px;border-bottom:1px #ccc solid;line-height:30px;}
+	.header_ul a{color:black;text-decoration:none;}
+	.header_ul a:hover{color:red;text-decoration:underline;}
+	.header_ul_left{float:left;height:100%;padding:0;list-style:none;}
+	.header_ul_left li{float:left;}
+	.header_ul_right{float:right;height:100%;padding:0;list-style:none;}
+	.header_ul_right li{float:left;}
+	.header_ul_right li font{color:red;}
+
+.b_search{width:100%;height:100px;margin-top:32px;}
+	#logo{float:left;width:240px;height:100%;margin-left:20px;}
+	.search_input{float:left;width:680px;height:100%;margin-left:20px;}
+	
+.b_middle{width:984px;height:auto;margin-top:20px;overflow:auto;}/*height:730px;*/
+	.middle_title{width:984px;height:32px;border-bottom:4px #0048B4 solid;}
+	.middle_title_ul{width:982px;height:100%;border-left:1px #ccc solid;border-top:1px #ccc solid;border-right:1px #ccc solid;margin:0px auto;padding:0;list-style:none;}
+	.middle_title_ul li{float:left;width:100px;height:100%;font-size:18px;line-height:32px;text-align:center;cursor:pointer;}
+	#index,#seek_rent{width:64px;}
+	#company,#broker{width:80px;}
+	#out_rent{background:#0048B4;font-weight:bold;color:white;}
+	#border_1,#border_2,#border_3,#border_4,#border_5{width:1px;height:22px;margin-top:5px;background:#ccc;}
+	
+	.display_count{width:970px;height:32px;line-height:32px;margin-left:12px;}
+	.display_count font{color:red;margin:0px 8px;}
+	
+	.terms_div{width:982px;height:200px;border:1px #CBDBF3 solid;}
+	
+	.terms_title_div{float:left;width:90px;height:100%;}
+	.terms_title_div font{float:right;font-weight:bold;margin-left:20px;margin-top:16px;}
+	/*.terms_title_font{float:right;}*/
+	
+	.terms_content_div{float:left;width:84%;height:100%;}
+	.term_object_div{float:left;width:90%;margin-top:16px;}
+	.term_object_ul{height:13px;padding:0;list-style:none;}
+	.term_object_ul li{float:left;margin-right:14px;}
+	.term_object_ul li a{color:#004499;text-decoration:none;}
+	.term_object_ul li a:hover{color:red;text-decoration:underline;}
+	.area_div{float:left;width:90%;margin-top:16px;}
+	.area_ul{height:13px;padding:0;list-style:none;}
+	.area_ul li{float:left;margin-right:14px;}
+	.area_ul li a{color:#004499;text-decoration:none;}
+	.area_ul li a:hover{color:red;text-decoration:underline;}
+	#a_id0{color:red;}
+	
+	.price_div{float:left;width:90%;margin-top:16px;}
+	.price_ul{height:13px;padding:0;list-style:none;}
+	.price_ul li{float:left;margin-right:14px;}
+	.price_ul li a{color:#004499;text-decoration:none;}
+	.price_ul li a:hover{color:red;text-decoration:underline;}
+	#price_1{color:red;}
+	
+	.house_type_div{float:left;width:90%;margin-top:16px;}
+	.house_type_ul{height:13px;padding:0;list-style:none;}
+	.house_type_ul li{float:left;margin-right:14px;}
+	.house_type_ul li a{color:#004499;text-decoration:none;}
+	.house_type_ul li a:hover{color:red;text-decoration:underline;}
+	#ht_id0{color:red;}
+	
+	.feature_div{float:left;width:90%;margin-top:16px;}
+	.feature_ul{height:13px;padding:0;list-style:none;}
+	.feature_ul li{float:left;margin-right:14px;}
+	.feature_ul li a{color:#004499;text-decoration:none;}
+	.feature_ul li a:hover{color:red;text-decoration:underline;}
+	#rt_id0{color:red;}
+	
+	.year_div{float:left;width:90%;margin-top:16px;}
+	.year_ul{height:13px;padding:0;list-style:none;}
+	.year_ul li{float:left;margin-right:14px;}
+	.year_ul li a{color:#004499;text-decoration:none;}
+	.year_ul li a:hover{color:red;text-decoration:underline;}
+	#year_1{color:red;}
+	
+	.small_area_div{float:left;width:90%;margin-top:16px;}
+	.small_area_ul{height:13px;padding:0;list-style:none;}
+	.small_area_ul li{float:left;margin-right:14px;}
+	.small_area_ul li a{color:#004499;text-decoration:none;}
+	.small_area_ul li a:hover{color:red;text-decoration:underline;}
+	#sa_id0{color:red;}
+	#term_object_1{color:red;}
+	/*中间左边部分*/
+	.middle_left{float:left;width:650px;height:auto;overflow:auto;margin-top:16px;}/*height:660px;*/
+	.house_menus_div{width:100%;height:auto;overflow:auto;}/*height:220px;*/
+	.house_menus_title{width:100%;height:32px;border-bottom:2px #0048b4 solid;}
+	.house_menus_title a:hover{color:red;text-decoration:underline;}
+	.house_menus_title h2{float:left;line-height:32px;}
+	.house_menus_title span{float:right;}
+	.house_menus_title span a{color:#004499;text-decoration:none;line-height:32px;}
+	
+	.house_menus_content{width:100%;}
+	.menu_object_div{width:100%;height:150px;margin-top:16px;border-bottom:1px #ccc solid;}
+	.menu_object_div a:hover{color:red;text-decoration:underline;}
+	.menu_object_div img{float:left;width:140px;height:140px;}
+	.menu_object_message{float:left;width:320px;height:100%;margin-left:12px;}
+	.object_title,.object_name,.object_type,.object_expediter{float:left;width:100%;}
+	.object_title a{color:#004499;text-decoration:none;font-size:14px;font-weight:bold;}
+	.object_name a{color:black;text-decoration:none;line-height:32px;}
+	.object_type a{color:black;text-decoration:none;line-height:32px;}
+	.object_expediter{line-height:32px;}
+	.menu_object_type{float:left;width:70px;height:100%;margin-left:12px;}
+	.menu_object_type p{width:100%;height:100%;line-height:140px;}
+	.menu_object_price{float:left;width:80px;height:100%;margin-left:12px;color:red;}
+	.menu_object_price p{width:100%;height:100%;line-height:140px;}
+	/*中间右边部分*/
+	.middle_right{float:right;width:315px;height:100%;margin-top:16px;}
+	.house_submit_div{width:313px;;height:160px;border:1px #CBDBF3 solid;}
+	.house_submit_img_div{float:left;width:40px;height:100%;}
+	.house_submit_img_div img{width:20px;height:20px;margin:16px 20px;}
+	.house_submit_content{float:left;width:86%;height:100%;}
+	.house_submit_content h2{margin:16px 0px;}
+	.house_submit_content p{color:#999;line-height:26px;}
+	.house_submit_content p font{color:red;}
+	.role_div{width:100%;height:32px;margin-top:12px;}
+	.do_submit{float:left;width:100px;height:32px;line-height:32px;color:white;font-size:16px;font-weight:bold;background:orange;cursor:pointer;}
+	.do_submit_broker{float:left;margin-left:16px;margin-top:8px;height:16px;}
+	.do_submit_broker img{width:16px;height:16px;}
+	.do_submit_broker a{margin-left:6px;color:#004499;text-decoration:none;font-size:14px;}
+	.do_submit_broker a:hover{color:red;text-decoration:underline;}
+	
+	.middle_right_img{width:100%;height:200px;margin-top:16px;}
+	
+	.rent_picture{width:100%;height:216px;margin-top:16px;}
+	.rent_picture_title{width:100%;height:32px;border-bottom:2px #0048B4 solid;}
+	.rent_picture_title a:hover{color:red;text-decoration:underline;}
+	.rent_picture_title h2{float:left;}
+	.rent_picture_title h2 a{color:black;text-decoration:none;line-height:32px;}
+	.rent_picture_title span{float:right;line-height:32px;}
+	.rent_picture_title span a{color:#004499;text-decoration:none;line-height:32px;}
+	.rent_picture_content{width:100%;height:166px;margin-top:16px;background:yellow;}
+.b_footer{width:984px;height:140px;margin:20px auto;}

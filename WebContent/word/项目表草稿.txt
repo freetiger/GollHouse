@@ -1,0 +1,35 @@
+小区表(small_Areas)：sa_id,sa_name, sa_address，sa_fishing_type（装修级别：精装，普装），sa_real_company(物业公司)，sa_complete_time(竣工时间) sa_develops(开发商)，sa_real_money(物业费),sai_id(小区图片:外键).a_id(区域：外键). sa_ischeck，sa_xpoint,sa_ypoint
+
+区域表(areas)：a_id,a_name,a_infos(备注). a_ischeck
+
+出租表(out_rents)：or_id,h_id(房源:外键),sa_id（小区）,
+rt_id（出租方式:外键）.or_ischeck，（or_price可以不要，在房源里）
+
+求租表(seek_rents)：sr_id,a_id,sr_price.sr_tel.sr_ischeck
+
+房源表(houses)：h_id,h_name,h_price(租金已月为单位),
+pt_id（修改为外键---付款方式：外键）,h_proportion(面积),ht_id（房型:外键）,h_floor(楼层),h_all_floor（总楼层）,h_hi_ids(图片集)，h_infos(备注).  h_ischarge(0个人,1经纪人)，h_relevance_id（--修改--关联id）het_ids(--修改--配置)，rt_id（出租类型），h_title(标题)，h_tag（关键字），h_ischeck(审核),h_xpoint,h_ypoint (-----应该多个信息，是否成功出租 h_isrent)
+
+中介公司(companys)：c_id,c_name,c_infos,c_complete_year(年限),c_address,c_img,c_ischeck
+
+经纪人(brokers)：b_id,b_name,b_pwd,b_realname,b_email,b_card(身份证),b_head_img（头像）,b_card_img（身份证图片）,b_business_img(营业执照)，b_tel,c_id(中介公司)，b_h_ids(房源集)，b_company(所在部门)，b_infos,b_grade（积分）,b_level(积分等级)，b_ischeck
+                                          
+个人表(personals)：per_id,per_name,per_tel,h_id.，per_ischeck
+租金表(rent_moneys)：rm_id,rm_count
+房型表(house_types)：ht_id,ht_name
+年份表(house_years)：hy_id,hy_years
+房源图片表(house_imgs)：hi_id,hi_url,hi_ischeck
+小区图片表(small_area_imgs)：sai_id,sai_url,sai_ischeck
+---
+
+-------新增
+出租类型表（rent_types）：rt_id,rt_name
+付款方式表（pay_type）:pt_id,pt_name
+配置表（house_equip_type）:het_id,het_name
+-------------后台----------
+系统表(systems)：sys_id,sys_name,sys_dns,sys_counts(网站交易量)，sys_tag(关键字),sys_logo(地址),sys_infos(介绍),sys_tel(电话),sys_date(日期),sys_qq()
+用户表(managers)： id,uname,pwd,p_id(权限id).ischeck
+权限表(powers)：p_id，p_name(权限对应的任务职位)，p_menus(对应菜单项)。p_ischeck
+菜单表(menus)：m_id,m_name(菜单名字),m_url(路径),f_id(父级);m_ischeck
+
+历史记录：historys:his_id,his_b_id(允许为空),his_manager_id(允许为空),his_do_name(操作人) ,his_do_actions（操作） his_do_event(操作事件),his_date()

@@ -1,0 +1,30 @@
+*{margin:0;padding:0;}
+body{font-size:14px;}
+.main_div{width:100%;height:50px;}
+	.bottom_div{width:100%;height:50px;background:#0048b4;background:url(../img/top_bg.png) repeat left;}
+	.logo{float:left;width:96px;height:40px;margin:5px 12px;}
+	.welcome{float:left;height:50px;margin-left:20px;line-height:50px;color:#1b99de;}
+	.welcome img{width:12px;height:14px;}
+	.welcome font{color:#0048b4;font-family:"幼圆";font-weight:bold;}
+	.integral{float:left;height:50px;margin-left:20px;line-height:50px;color:#1b99de;}
+	.integral font{color:#0048b4;}
+	.today{float:left;height:50px;margin-left:20px;line-height:50px;color:#1b99de;}
+	.logout{float:left;height:50px;margin-left:12px;line-height:50px;}
+	.logout a{color:#1b99de;text-decoration:none;}
+	.logout a:hover{text-decoration:underline;}
+	.function{float:right;height:50px;line-height:50px;margin-right:14px;}
+	.function a{margin-right:6px;color:#1b99de;text-decoration:none;}
+	.function a:hover{text-decoration:underline;}
+	
+	/*左侧*/
+	#left_div{float:left;width:150px;height:100%;overflow:auto;background:#1b99de;}
+	.common{width:100%;height:auto;}
+	.left_title{width:100%;height:28px;background:url(../img/top_bg.png) repeat-x center;text-align:center;line-height:28px;font-weight:bold;border-radius:5px;}
+	#menu_content{width:100%;height:auto;}
+	#menu_ul{width:100%;height:100%;overflow:auto;list-style:none;padding:0;}
+	#menu_ul li a{width:100%;height:32px;line-height:32px;margin-top:12px;text-decoration:none;font-weight:bold;color:white;text-align:center;cursor:pointer;display:block;}
+	#menu_ul_li_1{background:url(../img/left_li_bg.png);}
+	
+	
+	/*右侧*/
+	#frame{float:left;border:0;}

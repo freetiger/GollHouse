@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<something-else-entirely>
+  <proxool>
+    <alias>myProxool</alias>
+    <driver-url>jdbc:mysql://localhost:3306/gollhouse</driver-url>
+    <driver-class>com.mysql.jdbc.Driver</driver-class>
+    <driver-properties>
+      <property name="user" value="root"/>
+      <property name="password" value="test123"/>
+    </driver-properties>
+    <!-- 最大连接数(默认5个),超过了这个连接数,再有请求时,就排在队列中等候,最大的等待请求数由maximum-new-connections决定 --> 
+    <maximum-connection-count>100</maximum-connection-count>   
+    <!-- proxool自动侦察各个连接状态的时间间隔(毫秒),侦察到空闲的连接就马上回收,超时的销毁,默认30秒 --> 
+    <house-keeping-sleep-time>90000</house-keeping-sleep-time> 
+    <!-- 最大的等待请求数，即因没有空闲连接可以分配而在队列中等待的最大请求数，超过这个请求数的，用户连接就不会被接受 -->
+    <proxool.simultaneous-build-throttle>20</proxool.simultaneous-build-throttle> 
+    <!-- 如果发现了空闲的数据库连接.house keeper 将会用这个语句来测试.这个语句最好非常快的被执行.如果没有定义,测试过程将会被忽略 -->
+    <house-keeping-test-sql>select 1</house-keeping-test-sql> 
+  </proxool>
+</something-else-entirely>

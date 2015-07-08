@@ -22,7 +22,7 @@ public class Rent_MoneysDaoImpl implements IRent_MoneysDao{
 	public int deleteRent_Moneys(int rmId) {
 		int count = 0;
 		try {
-			String deleteString = "delete from rent_Moneys where rm_id=?";
+			String deleteString = "delete from rent_moneys where rm_id=?";
 			PreparedStatement pstatement = db.getPrepareStatement(deleteString);
 			pstatement.setInt(1, rmId);
 			count = db.executeUpdate(pstatement);
@@ -37,7 +37,7 @@ public class Rent_MoneysDaoImpl implements IRent_MoneysDao{
 
 	public boolean insertRent_Moneys(Rent_Moneys rm) {
 		try {
-			String addString = "insert into rent_Moneys values(null,?)";
+			String addString = "insert into rent_moneys values(null,?)";
 			PreparedStatement pstatement = db.getPrepareStatement(addString);
 			pstatement.setString(1, rm.getRm_count());
 			db.executeUpdate(pstatement);
@@ -55,7 +55,7 @@ public class Rent_MoneysDaoImpl implements IRent_MoneysDao{
 		List<Rent_Moneys> rent_Moneys = new ArrayList<Rent_Moneys>();
 		Rent_Moneys rent_Money;
 		try {
-			String queryString = "select * from rent_Moneys";
+			String queryString = "select * from rent_moneys";
 			PreparedStatement pstatement = db.getPrepareStatement(queryString);
 			ResultSet rs = db.executeQuery(pstatement);
 			while(rs.next()){
@@ -77,7 +77,7 @@ public class Rent_MoneysDaoImpl implements IRent_MoneysDao{
 	public Rent_Moneys queryRent_MoneysById(int rmId) {
 		Rent_Moneys rent_Money = null;
 		try {
-			String queryString = "select * from rent_Moneys where rm_id=?";
+			String queryString = "select * from rent_moneys where rm_id=?";
 			PreparedStatement pstatement = db.getPrepareStatement(queryString);
 			pstatement.setInt(1, rmId);
 			ResultSet rs = db.executeQuery(pstatement);
@@ -99,7 +99,7 @@ public class Rent_MoneysDaoImpl implements IRent_MoneysDao{
 	public int updateRent_Moneys(Rent_Moneys rm) {
 		int count = 0;
 		try {
-			String updString = "update rent_Moneys set rm_count=? where rm_id=?";
+			String updString = "update rent_moneys set rm_count=? where rm_id=?";
 			PreparedStatement pstatement = db.getPrepareStatement(updString);
 			pstatement.setString(1, rm.getRm_count());
 			pstatement.setInt(2, rm.getRm_id());
@@ -116,7 +116,7 @@ public class Rent_MoneysDaoImpl implements IRent_MoneysDao{
 	public int insertRent_Moneys() {
 		int id=0;
 		try {
-			String addString = "insert into rent_Moneys values(null,'无')";
+			String addString = "insert into rent_moneys values(null,'无')";
 			PreparedStatement pstatement = db.getPrepareStatementWithReturnId(addString);
 			id=(int)db.executeUpdateReturnId(pstatement);
 		} catch (Exception e) {
